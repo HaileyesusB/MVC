@@ -1,0 +1,48 @@
+﻿@model MVC.Models.Expense
+<form method="post" asp-action="DeletePost">
+    <input asp-for="Id" hidden />
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" style="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Delete Expense</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-6">
+                        <label for="exampleInputEmail1" asp-for="ExpenseName">Expense Name</label>
+                    </div>
+                    <div class="col-6">
+                        <label for="borrower" asp-for="Ammount">Ammount</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+
+                    <div class="col-6">
+                        <input type="text" class="form-control" disabled id="inputName" placeholder="Enter Expense Name" asp-for="ExpenseName">
+                       
+                    </div>
+
+                    <div class="col-6">
+                        <input type="number" class="form-control" disabled id="ammount" placeholder="Ammount" asp-for="Ammount">
+                       
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-8 offset-2 text-center row" style="margin-top: 10px">
+                        <div class="col">
+                            <input type="submit" class="btn btn-danger w-75" value="Delete" />
+                        </div>
+
+                        <div class="col">
+                            <a class="btn btn-success w-75" asp-controller="Expense" asp-action="Index">Back</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

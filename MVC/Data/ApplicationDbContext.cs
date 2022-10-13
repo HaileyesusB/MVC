@@ -10,5 +10,9 @@ namespace MVC.Data
 
         }
         public DbSet<Item> Items { get; set; }
+
+        public DbSet<Expense> Expense { get; set; }
+
+        public DbSet <ExpenseType> ExpenseType { get; set; }
     }
 }

@@ -1,0 +1,46 @@
+﻿@model MVC.Models.ExpenseType
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" style="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Expense</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-6">
+                        <label for="exampleInputEmail1" asp-for="Name">Expense Name</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="inputName" placeholder="Enter Expense Name" asp-for="Name">
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                  </div>
+
+                <div class="form-group row">
+                    <div class="col-8 offset-2 text-center row" style="margin-top: 10px">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Create" />
+
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger w-75" asp-controller="ExpenseType" asp-action="Index">Back</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts
+    {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    }

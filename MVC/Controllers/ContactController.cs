@@ -16,6 +16,7 @@ namespace MVC.Controllers
         public IActionResult ContactDetail(int id)
         {
             return Ok("Action Detail");
+
         }
     }
 }
